@@ -1,6 +1,15 @@
 import React from 'react';
-import reactDom from 'react-dom';
-import App from './components/App';
-import 'bootstrap/dist/css/bootstrap.css';
+import ReactDom from 'react-dom';
+import App from './components/App'
+// import 'bootstrap/dist/css/bootstrap.css';
 
-reactDom.render(<App />, document.getElementById('root'));
+
+
+ReactDom.render(<App />, document.getElementById('root'))
+
+// ReactDOM.render(
+//     <React.StrictMode>
+//       <App />
+//     </React.StrictMode>,
+//     document.getElementById('root')
+//   );
