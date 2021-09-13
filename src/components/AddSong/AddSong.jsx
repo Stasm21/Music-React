@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 
 
+
 class AddSong extends Component {
     constructor(props) {
         super(props)
@@ -32,8 +33,8 @@ class AddSong extends Component {
             title: this.state.title,
             artist: this.state.artist,
             album: this.state.album,
-            release_date: this.state.release_date,
             genre: this.state.genre,
+            release_date: this.state.release_date,
         }
         try {
             let response = await axios.post('http://127.0.0.1:8000/music/', song);
@@ -44,6 +45,8 @@ class AddSong extends Component {
             console.log('Song not added, please try again');
         }
     }
+
+
 
     render() {
         return (
@@ -58,7 +61,7 @@ class AddSong extends Component {
                         <label>Genre:</label>
                         <input type="text" name='genre' onChange={this.handleChange} value={this.genre}/>
                         <label>Release Date:</label>
-                        <input type="text" name='release_date' onChange={this.handleChange} value={this.release_date}/>
+                        <input type="DatePicker" name='release_date' onChange={this.handleChange} value={this.release_date} placeholder='YYYY-MM-DD'/>
                     </div>
                 <input type="submit" value='Submit' />
             </form>
