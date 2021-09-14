@@ -1,10 +1,10 @@
 import React from 'react';
-import './NameBadge.css'
+import './ViewSongs.css'
 
 
 
 
-const NameBadge = (props) => {
+const ViewSongs = (props) => {
     return (
 
     <table className='table'>
@@ -18,15 +18,15 @@ const NameBadge = (props) => {
                 </tr>
             </thead>
             <tbody>
-               {props.songs.map((song) => {
+               {props.songs.map((song, index) => {
                    return (
-                        <tr>
+                        <tr className='Deats' key={index} >
                             <td>{song.title}</td>
                             <td>{song.artist}</td>
                             <td>{song.album}</td>
                             <td>{song.genre}</td>
                             <td>{song.release_date}</td>
-                            <button onClick={() => props.deleteSong(song.id)}>Delete</button>
+                            <td><button onClick={() => props.deleteSong(song.id)}>Delete</button></td>
                         </tr>
                    );
                 })}
@@ -35,4 +35,4 @@ const NameBadge = (props) => {
         );
 }
 
-export default NameBadge;
+export default ViewSongs;

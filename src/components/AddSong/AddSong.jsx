@@ -13,8 +13,7 @@ class AddSong extends Component {
             genre: '',
             release_date: ''
         }
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+
     }
 
     handleChange = (event) => {
@@ -46,12 +45,16 @@ class AddSong extends Component {
         }
     }
 
+    filterByDetail = () => {
+
+    }
 
 
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
                     <div>
+                        <h2>Add New Song</h2>
                         <label>Title:</label>
                         <input type="text" name='title' onChange={this.handleChange} value={this.title}/>
                         <label>Artist:</label>
@@ -63,7 +66,7 @@ class AddSong extends Component {
                         <label>Release Date:</label>
                         <input type="DatePicker" name='release_date' onChange={this.handleChange} value={this.release_date} placeholder='YYYY-MM-DD'/>
                     </div>
-                <input type="submit" value='Submit' />
+                <input type="submit" value='Add Song!' />
             </form>
         );
     }

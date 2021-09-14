@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
-import NameBadge from './NameBadge/NameBadge';
+import ViewSongs from './ViewSongs/ViewSongs';
 import AddSong from './AddSong/AddSong';
+import FilterSong from './FilterSong/FilterSong';
 
 
 
@@ -35,15 +36,42 @@ class App extends Component {
         window.location.reload();
     }
 
+    filterTitle = (text) => {
+        const song = this.state.songs.filter((song) => song.title.toLowerCase().includes(text))
+        this.setState({
+            songs: song
+        });
+    }
 
+    filterArtist = (text) => {
+        const song = this.state.songs.filter((song) => song.artist.toLowerCase().includes(text))
+        this.setState({
+            songs: song
+        });
+    }
 
+    filterAlbum = (text) => {
+        const song = this.state.songs.filter((song) => song.album.toLowerCase().includes(text))
+        this.setState({
+            songs: song
+        });
+    }
+
+    filterGenre = (text) => {
+        const song = this.state.songs.filter((song) => song.genre.toLowerCase().includes(text))
+        this.setState({
+            songs: song
+        });
+    }
 
     render() {
         return (
             <div className="App">
-                <h1>Hello World</h1>
-                <NameBadge songs={this.state.songs} deleteSong={this.onDelete}/>
+                <h1>Song List</h1>
+                <ViewSongs songs={this.state.songs} deleteSong={this.onDelete}/>
                 <AddSong />
+                <FilterSong shoebox={this.state.songs} filterTitle={this.filterTitle} filterArtist={this.filterArtist} filterAlbum={this.filterAlbum} filterGenre={this.filterGenre}/>
+
             </div>
         );
     }
