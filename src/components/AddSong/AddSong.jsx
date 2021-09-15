@@ -65,7 +65,7 @@ class AddSong extends Component {
                         <label></label>
                         <input type="text" name='genre' onChange={this.handleChange} value={this.genre} placeholder="Genre"/><br />
                         <label></label>
-                        <input type="DatePicker" name='release_date' onChange={this.handleChange} value={this.release_date} placeholder='YYYY-MM-DD "release date'/><br />
+                        <input rows="8" columns="30" type="DatePicker" name='release_date' onChange={this.handleChange} value={this.release_date} placeholder='YYYY-MM-DD "release date"'/><br />
                         <input className="add-butt" type="submit" value='Add to Playlist' />
                     </div>
             </form>

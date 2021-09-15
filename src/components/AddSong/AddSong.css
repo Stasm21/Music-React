@@ -5,6 +5,7 @@
 }
 
 .add-song-title {
+    padding-top: 25px;
     color: rgb(79, 86, 96);
     font-family: Courier, monospace;
 
@@ -12,4 +13,8 @@
 
 .add-butt {
     text-align: center;
+}
+
+.add-song input {
+    width: 225px
 }
