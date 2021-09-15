@@ -21,20 +21,23 @@ class FilterSong extends Component {
     //     this.addNewsong(this.state)
     // }
 
-
+    refreshPage = () => {
+        window.location.reload();
+      }
 
     render() {
         return (
 
-            <div>
-                <h2>Search Song by Filter</h2>
+            <div className="search-container">
+                <h2 className="search-title" >Search</h2>
 
-                <button onClick={ () => this.props.filterTitle(this.state.text.toLowerCase())}  className="" type="button">Title</button><br />
-                <button onClick={ () => this.props.filterArtist(this.state.text.toLowerCase())}  className="" type="button">Artist</button><br />
-                <button onClick={ () => this.props.filterAlbum(this.state.text.toLowerCase())}  className="" type="button">Album</button><br />
-                <button onClick={ () => this.props.filterGenre(this.state.text.toLowerCase())}  className="" type="button">Genre</button><br />
-                <input onChange={this.handleChange} type="text" placeholder='keywords'/><br />
-
+                <input onChange={this.handleChange} type="text" placeholder='keywords' className="filter_search"/><br />
+                <p></p>
+                <button onClick={ () => this.props.filterTitle(this.state.text.toLowerCase())}  className="" type="button">Title</button>
+                <button onClick={ () => this.props.filterArtist(this.state.text.toLowerCase())}  className="" type="button">Artist</button>
+                <button onClick={ () => this.props.filterAlbum(this.state.text.toLowerCase())}  className="" type="button">Album</button>
+                <button onClick={ () => this.props.filterGenre(this.state.text.toLowerCase())}  className="" type="button">Genre</button>
+                <button onClick={this.refreshPage}>Reset Search</button>
             </div>
 
 

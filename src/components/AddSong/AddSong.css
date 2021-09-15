@@ -1,20 +1,15 @@
 
 
-
-
-.search-container {
-    font-size: 20px;
-    padding-top: 50px;
+.add-song {
     text-align: center;
 }
 
-.search-title {
+.add-song-title {
     color: rgb(79, 86, 96);
     font-family: Courier, monospace;
 
 }
 
-.filter_search {
+.add-butt {
     text-align: center;
-    min-width: 80px;
 }

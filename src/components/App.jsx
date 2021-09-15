@@ -67,7 +67,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1>Song List</h1>
+                <h1 className="page-title">Song List</h1>
                 <ViewSongs songs={this.state.songs} deleteSong={this.onDelete}/>
                 <AddSong />
                 <FilterSong shoebox={this.state.songs} filterTitle={this.filterTitle} filterArtist={this.filterArtist} filterAlbum={this.filterAlbum} filterGenre={this.filterGenre}/>

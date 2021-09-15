@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './AddSong.css'
 
 
 
@@ -53,20 +54,20 @@ class AddSong extends Component {
     render() {
         return (
             <form onSubmit={this.handleSubmit}>
-                    <div>
-                        <h2>Add New Song</h2>
-                        <label>Title:</label>
-                        <input type="text" name='title' onChange={this.handleChange} value={this.title}/>
-                        <label>Artist:</label>
-                        <input type="text" name='artist' onChange={this.handleChange} value={this.artist}/>
-                        <label>Album:</label>
-                        <input type="text" name='album' onChange={this.handleChange} value={this.album}/>
-                        <label>Genre:</label>
-                        <input type="text" name='genre' onChange={this.handleChange} value={this.genre}/>
-                        <label>Release Date:</label>
-                        <input type="DatePicker" name='release_date' onChange={this.handleChange} value={this.release_date} placeholder='YYYY-MM-DD'/>
+                    <div className="add-song">
+                        <h2 className="add-song-title">Add New Song</h2>
+                        <label></label>
+                        <input type="text" name='title' onChange={this.handleChange} value={this.title} placeholder="Title"/><br />
+                        <label></label>
+                        <input type="text" name='artist' onChange={this.handleChange} value={this.artist} placeholder="Artist"/><br />
+                        <label></label>
+                        <input type="text" name='album' onChange={this.handleChange} value={this.album} placeholder="Album"/><br />
+                        <label></label>
+                        <input type="text" name='genre' onChange={this.handleChange} value={this.genre} placeholder="Genre"/><br />
+                        <label></label>
+                        <input type="DatePicker" name='release_date' onChange={this.handleChange} value={this.release_date} placeholder='YYYY-MM-DD "release date'/><br />
+                        <input className="add-butt" type="submit" value='Add to Playlist' />
                     </div>
-                <input type="submit" value='Add Song!' />
             </form>
         );
     }

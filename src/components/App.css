@@ -1,4 +1,23 @@
 .App {
-    text-align: center;
+    
     background-color: rgb(222, 227, 228);
+}
+
+/* h1 {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    color: rgb(79, 86, 96);
+    font-family: Courier, monospace;
+    font-weight: bold;
+
+} */
+
+.page-title {
+    text-align: center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    color: rgb(79, 86, 96);
+    font-family: Courier, monospace;
+    font-weight: bold;
 }
